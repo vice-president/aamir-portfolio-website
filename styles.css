@@ -46,3 +46,9 @@ body.light .btn.ghost{border-color:#b8c8ff;color:#123}
 body.light .theme-btn{background:#fff;color:#123;border-color:#c9d7ff}
 
 @media (max-width:700px){h1{font-size:40px}.subtitle{font-size:17px}.nav{padding:14px}}
+
+
+.social-float{position:fixed;right:18px;bottom:20px;display:flex;flex-direction:column;gap:10px;z-index:30}
+.social-btn{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:#162450;border:1px solid #2e4382;color:#dce5ff;text-decoration:none;box-shadow:0 6px 22px rgba(0,0,0,.25);transition:.2s transform,.2s background}
+.social-btn:hover{transform:translateY(-2px) scale(1.03);background:#223474}
+body.light .social-btn{background:#fff;color:#123;border-color:#c9d7ff}
