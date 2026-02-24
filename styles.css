@@ -81,3 +81,14 @@ body.light .back-to-top{background:#fff;border-color:#c9d7ff;color:#1b2a5f}
 .hero-content{max-width:980px}
 .hero-avatar{width:120px;height:120px;object-fit:cover;object-position:center;border-radius:50%;border:3px solid #6f8dff;display:block;margin:0 0 12px 0;box-shadow:0 10px 24px rgba(0,0,0,.35)}
 @media (max-width:700px){.hero-avatar{width:96px;height:96px}}
+
+.gravity-item{will-change:transform;animation:gravity-fall 1.2s cubic-bezier(.2,.7,.22,1) forwards;animation-delay:var(--fall-delay,0s)}
+@keyframes gravity-fall{
+  0%{transform:translate3d(0,0,0) rotate(0deg)}
+  80%{transform:translate3d(var(--fall-x,0px),var(--fall-y,65vh),0) rotate(var(--fall-r,8deg))}
+  100%{transform:translate3d(var(--fall-x,0px),calc(var(--fall-y,65vh) + 14px),0) rotate(var(--fall-r,8deg))}
+}
+
+body.gravity-active .bg-orb,
+body.gravity-active .particle-canvas{opacity:.08}
+

@@ -106,3 +106,26 @@ if (canvas) {
   window.addEventListener('resize', resize);
   tick();
 }
+
+// Google gravity-style effect (resets on refresh)
+const gravityBtn = document.getElementById('gravityBtn');
+if (gravityBtn) {
+  gravityBtn.addEventListener('click', () => {
+    if (document.body.classList.contains('gravity-active')) return;
+
+    document.body.classList.add('gravity-active');
+    gravityBtn.disabled = true;
+    gravityBtn.textContent = 'Gravity On';
+
+    const targets = document.querySelectorAll('header .hero-content > *:not(.cta-row), main > section, footer');
+    targets.forEach((el, i) => {
+      const rect = el.getBoundingClientRect();
+      const travelY = Math.max(40, window.innerHeight - rect.top + 120);
+      el.style.setProperty('--fall-y', `${travelY}px`);
+      el.style.setProperty('--fall-x', `${(Math.random() * 80 - 40).toFixed(0)}px`);
+      el.style.setProperty('--fall-r', `${(Math.random() * 26 - 13).toFixed(1)}deg`);
+      el.style.setProperty('--fall-delay', `${(i * 0.03).toFixed(2)}s`);
+      el.classList.add('gravity-item');
+    });
+  });
+}
