@@ -73,3 +73,5 @@ body.light .back-to-top{background:#fff;border-color:#c9d7ff;color:#1b2a5f}
 .social-rail a{width:44px;height:44px;border-radius:12px;background:#101a3a;border:1px solid #324883;display:grid;place-items:center;box-shadow:0 8px 18px rgba(0,0,0,.28)}
 .social-rail img{width:20px;height:20px}
 @media (max-width:700px){.social-rail{right:10px;bottom:12px}}
+
+.icon-btn svg{margin-right:8px;display:inline-block;vertical-align:middle}
