@@ -66,3 +66,10 @@ body.light .social-btn{background:#fff;color:#123;border-color:#c9d7ff}
 .glow-ring>*{position:relative;z-index:1}
 @keyframes ring{to{transform:rotate(360deg)}}
 body.light .back-to-top{background:#fff;border-color:#c9d7ff;color:#1b2a5f}
+
+
+.btn-ico{width:16px;height:16px;display:inline-block;vertical-align:middle;margin-right:8px;border-radius:3px}
+.social-rail{position:fixed;right:14px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:55}
+.social-rail a{width:44px;height:44px;border-radius:12px;background:#101a3a;border:1px solid #324883;display:grid;place-items:center;box-shadow:0 8px 18px rgba(0,0,0,.28)}
+.social-rail img{width:20px;height:20px}
+@media (max-width:700px){.social-rail{right:10px;bottom:12px}}
