@@ -75,3 +75,10 @@ body.light .back-to-top{background:#fff;border-color:#c9d7ff;color:#1b2a5f}
 @media (max-width:700px){.social-rail{right:10px;bottom:12px}}
 
 .icon-btn svg{margin-right:8px;display:inline-block;vertical-align:middle}
+
+
+.hero-content{display:grid;grid-template-columns:160px 1fr;gap:22px;align-items:center}
+.hero-text{min-width:0}
+.hero-photo-wrap{display:flex;justify-content:center}
+.hero-photo{width:150px;height:150px;object-fit:cover;border-radius:50%;border:3px solid #6f8dff;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+@media (max-width:800px){.hero-content{grid-template-columns:1fr}.hero-photo{width:120px;height:120px}}
